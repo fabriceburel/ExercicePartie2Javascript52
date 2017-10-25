@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 2</title>
+</head>
+<body>
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom"/>
+  </form>
+  <script> // ce script javascript est equivalent à écrire dans le fichier html
+  // <img src="image1.jpg"  onmouseover="this.src='image1_2.jpg'" id="image1"/>
+  document.getElementById('nom').addEventListener('blur', function(){
+  var input = document.getElementById('nom').value;
+  if (isNaN(input) == true && input){ //vérification que le champs saisi n'est ni vide et qu'il s'agit bien d'une chaine de caractère.
+    alert('merci de votre participation');
+  }
+  else{
+    alert('Remplissez le champs correctement!!');
+  }
+    //alert('bonjour'); // test d'affichage de message au survol de l'image
+  });
+
+  </script>
+</body>
+</html>
